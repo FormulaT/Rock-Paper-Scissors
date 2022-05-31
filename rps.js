@@ -1,12 +1,12 @@
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
 const resultDisplay = document.getElementById('result');
-const possibleChoices = document.querySelectorAll('button');
+const possibleChoices = document.querySelectorAll('img');
 let userChoice, computerChoice, result;
 
 possibleChoices.forEach(choice => choice.addEventListener('click', (e) => {
     userChoice = e.target.id;
-    userChoiceDisplay.innerHTML = userChoice;
+    userChoiceDisplay.setAttribute('src',`img/${userChoice}.png`);
     generateComputerChoice()
     getResult();
 }))
@@ -25,7 +25,7 @@ function generateComputerChoice() {
             computerChoice = 'scissors';
             break;
     }
-    computerChoiceDisplay.innerHTML = computerChoice;
+    computerChoiceDisplay.setAttribute('src',`img/${computerChoice}.png`);
 }
 
 function getResult() {

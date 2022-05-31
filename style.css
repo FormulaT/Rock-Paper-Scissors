@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Corbel, sans-serif;
+}
+
+#game-window {
+    display: flex;
+    flex-direction: column;
+}
