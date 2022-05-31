@@ -1,7 +1,7 @@
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
 const resultDisplay = document.getElementById('result');
-const possibleChoices = document.querySelectorAll('img');
+const possibleChoices = Array.from(document.getElementsByClassName('button'));
 let userChoice, computerChoice, result;
 
 possibleChoices.forEach(choice => choice.addEventListener('click', (e) => {
@@ -12,19 +12,8 @@ possibleChoices.forEach(choice => choice.addEventListener('click', (e) => {
 }))
 
 function generateComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * possibleChoices.length);
-    
-    switch (randomNumber) {
-        case 1:
-            computerChoice = 'rock';
-            break;
-        case 2:
-            computerChoice = 'paper';
-            break;
-        default:
-            computerChoice = 'scissors';
-            break;
-    }
+    const randomIndex = Math.floor(Math.random() * 3);
+    computerChoice = possibleChoices[randomIndex].id;
     computerChoiceDisplay.setAttribute('src',`img/${computerChoice}.png`);
 }
 

@@ -11,20 +11,34 @@
 <body>
 
     <div id="game-window">
-        <h2>
-            Computer <br>  
-            <img src="" id="computer-choice">
-        </h2>
-        <h2>
-            You <br>
-            <img src="" id="user-choice">
-        </h2>
-        <h2>Result:<span id="result"></span></h2>
-    
+
+        <div id="game-play">
+            <h2 id="computer">
+                Computer <br>  
+                <img src="img/idle.png" id="computer-choice">
+            </h2>
+            <h2 id="user">
+                You <br>
+                <img src="img/idle.png" id="user-choice">
+            </h2>
+            <h2 id="result"><span id="computer-score"></h2>
+            <br>
+        </div>
+        
         <div id="buttons">
-            <img src="img/rock.png" alt="image of a rock" id="rock">
-            <img src="img/paper.png" alt="imag of a hand (paper)" id="paper">
-            <img src="img/scissors.png" alt="image of a scissor shaped hand" id="scissors">
+            <span>
+                <img src="img/rock.png" class="button" alt="image of a rock" id="rock">
+                Rock
+            </span>
+            <span>
+                <img src="img/paper.png" class="button" alt="imag of a hand (paper)" id="paper">
+                Paper
+            </span>
+            
+            <span>
+                <img src="img/scissors.png" class="button" alt="image of a scissor shaped hand" id="scissors">
+                Scissors
+            </span>
         </div>
     </div>
 

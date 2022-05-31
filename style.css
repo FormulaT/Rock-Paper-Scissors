@@ -3,9 +3,78 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Corbel, sans-serif;
+    font-variant: small-caps;
+    user-select: none;
+    background-color: lightblue;
 }
 
 #game-window {
     display: flex;
     flex-direction: column;
+}
+
+#game-play {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-bottom: 5px solid black;
+}
+
+#computer, #user, #result {
+    position: absolute;
+    top: 5%;
+    font-size: 2rem;
+}
+
+#computer {
+    left: 2%;
+}
+
+#result {
+    right: 45%;
+    font-size: 2.5rem;
+}
+
+#user {
+    right: 3%;
+}
+
+#computer-choice, #user-choice {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+#user-choice {
+    right: 2%;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.button:hover {
+   border-color: cyan;
+   box-shadow: 0 0 16px black;
+   transform: scale(1.2);
+}
+
+.button:active {
+    transform: scale(1.1);
 }
