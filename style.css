@@ -4,8 +4,8 @@
     box-sizing: border-box;
     font-family: Corbel, sans-serif;
     font-variant: small-caps;
-    user-select: none;
     background-color: lightblue;
+    user-select: none;
 }
 
 #game-window {
